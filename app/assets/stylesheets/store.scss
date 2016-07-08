@@ -1,0 +1,176 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+}
+body {
+  width:100%;
+  background-color:#1E1E1E;
+  /* Margin bottom by footer height */
+  margin-bottom: 400px;
+ 
+}
+/*html, body { 
+  background-color:#1E1E1E;
+  position: relative;
+  min-height: 100%;
+  margin-bottom: 100px;
+  padding-top: 60px;
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
+}*/
+h1, h2, h3, p, ul, li {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #DDDDDD;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  width: 100px;
+  padding-left:5px;
+}
+ul.header {
+  background-color: #1E1E1E;
+  padding: 0;
+}
+ul.header li a {
+  color: #DDDDDD;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  padding: 20px;
+  display: inline-block;
+}
+
+
+.content {
+  width:50%;
+  background-color: #1E1E1E;
+  height:300px;
+  padding: 20px;
+  margin-left: 25%;
+  border-top:solid 4px #303030;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.content .contact {
+  text-align: center;
+}
+
+.active {
+  background-color: #D14B34;
+  box-shadow: 0px 2px 5px #666;
+  border: 2px  #a1a1a1;
+  padding: 10px 20px;
+  width: 70px;
+  border-radius: 13px;
+}
+
+.title{
+	text-align:center;
+}
+
+.header{
+	text-align:center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #303030;
+    border-top:10px solid #7F062C;
+}
+
+.text-muted {
+  color: #CCCCCC;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+#map_canvas{
+  height: 80%;
+  width: 100%;
+}
+
+/*********************************/
+
+.anouncements{
+  height:100%;
+  width:50%;
+  background-color: #1E1E1E;
+  margin-left: 25%;
+  border-top:5px solid #303030;
+}
+
+
+
+/********************************/
+
+.flex-container {
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  padding:20px;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 175px;
+  height: 175px;
+  margin-top: 10px;
+  
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 350px;
+    background-color: #303030;
+}
+  .text-muted {
+  color: #CCCCCC;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+#map_canvas{
+  height: 80%;
+  width: 100%;
+}
+
+  }

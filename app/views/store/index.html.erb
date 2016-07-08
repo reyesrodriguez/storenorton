@@ -1,0 +1,107 @@
+<div id="container">
+
+
+</div>
+
+  
+<script type="text/babel">
+
+
+  var { Router,
+      Route,
+      IndexRoute,
+      IndexLink,
+      Link } = ReactRouter;
+
+
+  var destination = document.querySelector("#container");
+
+  var Home = React.createClass({
+    render: function(){
+      return(
+        <div >
+          <h2 className="shop">Shop</h2>
+          <p>The Norton label is home to the frantic sounds of Hasil Adkins, Link Wray, the Pretty Things, the Flamin Groovies, the Alarm Clocks, the Sonics, the Wailers, Question Mark and the Mysterians, Dale Hawkins, Ron Haydock, the Rockin Rs, Esquerita, Andre Williams, Jack Starr, the Flat Duo Jets, the Untamed Youth, the Phantom Surfers, King Uszniewicz, the Hentchmen, Wade Curtiss, Jackie & the Cedrics, the Church Keys, The Dictators and loads more wildies!</p>
+          <p>This year is our 30th Anniversary, drop by and blast 
+          with us!!!</p>
+          
+        </div>
+        );
+    }
+  });
+
+  var Contact = React.createClass({
+  render: function() {
+      return (
+        <div class="contact">
+          <h2>WANT RECORDS?</h2>
+          <p>Send us an email or call us.</p>
+          <h3>Email</h3>
+          <p>nortonrecordsnyc@gmail.com</p>
+          <h3>Phone</h3>
+          <p>917-971-7884</p>
+          
+        </div>
+      );
+    }
+});
+
+var Stuff = React.createClass({
+  render: function() {
+      return (
+        <div>
+          <h2>DIRECTIONS</h2>
+          <p>We are located between Crown Heights and Prospect Heights neighborhoods in Brooklyn New York. </p>
+          <h2>Manhattan</h2>
+          <h3>Train</h3>
+          <p>Clinton-Washington station C Train.</p>
+  
+            
+        </div>
+     
+
+      );
+  
+    }
+  });
+
+
+
+  var App = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <ul className="header">
+          <li><IndexLink to="/" activeClassName="active">Shop</IndexLink></li>
+          <li><Link to="/stuff" activeClassName="active">Location</Link></li>
+          <li><Link to="/contact" activeClassName="active">Contact</Link></li>
+        </ul>
+         <h1 className="title"><img src="https://s3-us-west-2.amazonaws.com/nortonphotos/norton_logo_store.png" alt="norton store logo" ></img></h1>
+        
+
+        <div className="content">
+          {this.props.children}
+        </div>
+       
+
+      </div>
+    )
+  }
+});
+
+
+  
+  ReactDOM.render(
+  <Router>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home}/>
+      <Route path="stuff" component={Stuff} />
+      <Route path="contact" component={Contact} />
+ 
+    </Route>
+  </Router>,
+  destination
+    );
+
+
+</script>
